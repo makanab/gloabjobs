@@ -1,0 +1,24 @@
+<div style="align-items:center;">
+    <h2>sign up</h2>
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <mat-form-field>
+        <input matInput placeholder="First Name" [(ngModel)]="firstName" name="firstname" appiarance="standard" >
+    </mat-form-field>
+    <br> 
+    <mat-form-field>
+      <input matInput placeholder="Last Name" [(ngModel)]="lastName" name="lastname" appiarance="standard" >
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="Email" [(ngModel)]="email" name="email" appiarance="standard"  >
+</mat-form-field>
+<br>
+<mat-form-field>
+  <input matInput placeholder="password" type="password" [(ngModel)]="password" name="password" appiarance="standard" >
+</mat-form-field>
+<br>
+<p> <button mat-raised-button  type="submit">Sign Up</button></p>
+
+</form>
+
+</div>
