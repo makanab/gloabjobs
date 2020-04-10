@@ -13,9 +13,32 @@ export class SignupComponent implements OnInit {
   @Input() lastName:string;
   @Input() email:string;
   @Input() password:string;
+
+  users:any;
+  showusers:boolean;
+
   constructor(private _userservice:UserService) { }
 
   ngOnInit() {
+
+    this._userservice.getUsers()
+    .subscribe(
+      Response =>{
+        this.users = Response
+        if(Response == '' ){
+          this.showusers = false;
+        }  else{
+          this.showusers = true;
+
+        }
+        
+        console.log(Response);
+      }
+    )
+
+
+
+
   }
 
   onSubmit(){
@@ -24,5 +47,14 @@ export class SignupComponent implements OnInit {
     
 
   }
+
+  
+
+
+
+
+
+
+
 
 }

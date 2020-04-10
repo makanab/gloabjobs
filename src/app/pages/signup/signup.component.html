@@ -1,4 +1,4 @@
-<div style="align-items:center;">
+<div class="signup-form">
     <h2>sign up</h2>
   <form (ngSubmit)="onSubmit()" #myForm="ngForm">
     <mat-form-field>
@@ -21,4 +21,19 @@
 
 </form>
 
+</div>
+<br>
+<br>
+<div style="margin-left: 4rem;"  *ngIf="showusers">
+  <h2>Registered Users</h2>
+  <ul *ngFor="let user of users let i = index">
+  <li> 
+     {{user._id}}:{{user.firstName}} {{user.lastName}} (index{{i}})
+ 
+  <button mat-flat-button  style="color: red;" 
+  (click)="_userservice.deleteUser(user._id)" >Delete</button>
+  </li>
+ 
+</ul>
+  
 </div>
