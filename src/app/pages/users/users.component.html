@@ -4,6 +4,9 @@
 <ul *ngFor="let candidate of candidates">
     <li>
     CandidateID:{{candidate._id}}
+     
+    <button mat-icon-button class="delete-btn">Delete</button>
+    <button mat-icon-button  class="update-btn">Update</button>
     </li>
      <li>
          Name:{{candidate.firstName}} {{candidate.lastName}}
@@ -12,7 +15,7 @@
         Email:{{candidate.email}}
      </li>
      <li>
-         Skils:{{candidate.skils}}
+         Skils:{{candidate.skills}}s
      </li>
 
 

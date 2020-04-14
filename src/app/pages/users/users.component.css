@@ -1,0 +1,11 @@
+
+.delete-btn{
+    color: red;
+}
+
+.update-btn{
+    color: green;
+}
+button{
+    margin-left: 2rem;
+}

@@ -2,7 +2,13 @@
  <h2>Jobs Listed for you</h2>
 
  <ul *ngFor="let job of jobs">
-     <li>JobID:{{job._id}}</li>
+     <li>
+         JobID:{{job._id}}
+         <button mat-icon-button class="delete-btn">Delete</button>
+         <button mat-icon-button  class="update-btn">Update</button>
+
+
+     </li>
      <li>Posted On:{{job.postedOn}}</li>
 
      <li>
@@ -13,6 +19,11 @@
      <li><p>Requirement:{{job.jobRequirment}}</p></li>
      <li><p>Deadline:{{job.Deadline}}</p></li>
  </ul>
+
+ <br>
+ <b>
+
+ </b>
 
 
 
