@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div class="row">
+
+    <!--Profile details-->
+<div class="profile-form">
+    <h2>Update profile</h2>
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <mat-form-field>
+        <input matInput placeholder="First Name" [(ngModel)]="firstName" name="firstname" appiarance="standard" >
+    </mat-form-field>
+    <br> 
+    <mat-form-field>
+      <input matInput placeholder="Last Name" [(ngModel)]="lastName" name="lastname" appiarance="standard" >
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="Email" [(ngModel)]="email" name="email" appiarance="standard"  >
+</mat-form-field>
+<br>
+<mat-form-field>
+    <textarea matInput placeholder="Skills"  [(ngModel)]="skills" name="skills" appiarance="standard" >
+  </textarea>
+  </mat-form-field>
+  <br>
+<mat-form-field>
+  <textarea matInput placeholder="cover letter"  [(ngModel)]="coverlater" name="coverlater" appiarance="standard" >
+</textarea>
+</mat-form-field>
+<br>
+<p> <button mat-raised-button  type="file">Upload Resume/cv</button></p>
+<br>
+<p> <button mat-raised-button  type="submit">Update</button></p>
+
+</form>       
+
+    </div>
+
+    <!--Profile details-->
+</div>

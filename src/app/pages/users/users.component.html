@@ -1,0 +1,22 @@
+<div>
+<h2>Candidates' List</h2>
+
+<ul *ngFor="let candidate of candidates">
+    <li>
+    CandidateID:{{candidate._id}}
+    </li>
+     <li>
+         Name:{{candidate.firstName}} {{candidate.lastName}}
+     </li>
+     <li>
+        Email:{{candidate.email}}
+     </li>
+     <li>
+         Skils:{{candidate.skils}}
+     </li>
+
+
+</ul>
+
+
+</div>

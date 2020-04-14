@@ -1,0 +1,19 @@
+<div>
+ <h2>Jobs Listed for you</h2>
+
+ <ul *ngFor="let job of jobs">
+     <li>JobID:{{job._id}}</li>
+     <li>Posted On:{{job.postedOn}}</li>
+
+     <li>
+        <h3>Job Title:{{job.jobTitle}}</h3>
+
+     </li>
+     <li><p>Description:{{job.jobDescription}}</p></li>
+     <li><p>Requirement:{{job.jobRequirment}}</p></li>
+     <li><p>Deadline:{{job.Deadline}}</p></li>
+ </ul>
+
+
+
+</div>

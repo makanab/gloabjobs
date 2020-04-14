@@ -1,0 +1,23 @@
+
+.dash-icon{
+    width: 48px;
+    height: 48px;
+    border-radius:50%;
+    background: #e67e22;
+    margin-left: 6rem;
+    padding: 32px  32px;
+}
+
+tr{
+    margin-left: 3rem;
+}
+
+mat-icon{
+    color: white;
+    width: 48px;
+    padding: 12px;
+}
+
+h4{
+    padding:16px;
+}

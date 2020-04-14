@@ -1,0 +1,18 @@
+
+<mat-sidenav-container class="sidenav-container" >
+    <mat-sidenav  opened mode="side" class="sidenav" > 
+
+        <mat-list role="list">
+            <mat-list-item role="listitem"><a mat-icon-button (click)="showDashboard()" >Dashboard</a></mat-list-item>
+            <mat-list-item role="listitem"><a mat-icon-button (click)="showProfile()">Profile</a></mat-list-item>
+            <mat-list-item role="listitem"><a mat-icon-button (click)="showPostJob()">Add Job</a></mat-list-item>
+            <mat-list-item role="listitem"><a mat-icon-button (click)="showJobs()" >Jobs</a></mat-list-item>
+            <mat-list-item role="listitem"><a mat-icon-button (click)="showCandidates()" >Candidates</a></mat-list-item>
+          </mat-list>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+ 

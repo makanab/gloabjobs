@@ -1,0 +1,40 @@
+<h2>Post a Job</h2>
+
+<!--job data -->
+
+<div  class="postjob-form">
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+        <mat-form-field>
+            <input matInput type="text" placeholder="Job title" [(ngModel)]="jobTitle" name="jobTitle">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <textarea matInput type="text" placeholder="job description" [(ngModel)]="jobDescription" name="jobDescription"></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <textarea matInput type="text" placeholder="job requirement" [(ngModel)]="jobRequirement" name="jobRequirement"></textarea>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field>
+            
+            <mat-label>Choose date for deadeline</mat-label>
+            <input matInput [matDatepicker]="picker"  [(ngModel)]="Deadline" name="Deadline">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <br>
+      
+          
+
+    <button mat-raised-button type="submit"> Submit </button>
+
+
+
+    </form>
+</div>
+
+
+<!--job data -->

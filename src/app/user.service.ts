@@ -17,7 +17,7 @@ export class UserService {
    .subscribe(Response =>{
       console.log(Response);
     });
-     location.reload();
+    
   }
 
 
@@ -32,8 +32,73 @@ export class UserService {
     .subscribe(()=> {
       console.log('!Deleted'+ userId);
     });
-    location.reload();
+    
   }
+
+
+  // add jobs 
+
+  postJob(jobTitle:string, jobDescription:string,jobRequirement:string,Deadline:string){
+    return  this.http.post('http://localhost:8000/job',{jobTitle, jobDescription,jobRequirement,Deadline} )
+    .subscribe(Response=>{console.log(Response)},
+    err=>{
+      console.log(err);
+    }
+    
+    
+    )
+  }
+
+
+
+  // get jobs 
+
+  getJobs(){
+    return this.http.get('http://localhost:8000/job');
+  }
+
+  
+  // delete job
+
+
+  deleteJob(JobId:string){
+    return  this.http.delete('http://localhost:8000/job/' +JobId)
+    .subscribe(()=> {
+      console.log('!Deleted'+ JobId);
+    });
+   
+  }
+  
+
+
+
+  // post candidate info 
+
+   postCandidate(firstName:string,lastName:string,email:string,coverletter:string ,skils:string){
+     return this.http.post('http://localhost:8000/candidate' ,{firstName,lastName,email,coverletter,skils})
+     .subscribe(Response=>console.log(Response));
+
+   }
+
+
+
+  //  get candidate info 
+  getCandidate(){
+    return this.http.get('http://localhost:8000/candidate')
+  }
+
+
+  // delete candidate
+  deleteCandidate(){
+
+  }
+
+
+
+
+
+
+  
 
 
 

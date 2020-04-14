@@ -1,0 +1,10 @@
+
+.postjob-form{
+   margin-left:20%; 
+}
+
+mat-form-field{
+    width: 400px;
+    height: auto;
+
+}
