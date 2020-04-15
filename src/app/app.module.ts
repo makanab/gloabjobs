@@ -28,6 +28,7 @@ import { JobListComponent } from './pages/job-list/job-list.component';
 import { PostJobComponent } from './pages/post-job/post-job.component';
 import { PanelComponent } from './pages/panel/panel.component';
 import { UsersComponent } from './pages/users/users.component';
+import { UserService } from './user.service';
 
 
 
@@ -59,11 +60,10 @@ import { UsersComponent } from './pages/users/users.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule
-  
    
     
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

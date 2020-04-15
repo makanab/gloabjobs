@@ -5,8 +5,9 @@
     <li>
     CandidateID:{{candidate._id}}
      
-    <button mat-icon-button class="delete-btn">Delete</button>
-    <button mat-icon-button  class="update-btn">Update</button>
+    <button mat-icon-button class="delete-btn" (click)="_myService.deleteCandidate(job._id)" >Delete</button>
+    <button mat-icon-button  class="update-btn"(click)="_myService.updateCandidate(job._id)" >Update</button>
+
     </li>
      <li>
          Name:{{candidate.firstName}} {{candidate.lastName}}

@@ -108,13 +108,35 @@ app.get('/job', (req,res,next)=>{
     .catch(()=>{console.log('an error occured');});
 });
 
-
-
 // update job 
+app.put('/job/:id',(req,res,next)=>{
+    Candidate.findByIdAndUpdate(req.params._id,
+        {
+            $set:{
+                jobTitle:req.body.jobTitle,
+                jobDescription:req.body.jobDescription,
+                jobRequirement:req.body.jobRequirement,
+                Deadline:req.body.Deadline
+             }
+    },
+    {
+        new:true
+    },
+    (err,update)=>{
+        if(err){
+            res.status(500).send('!error occured while updating Job')
+        }else{
+            res.status(200).send(update)
+
+        }
+
+    });
+});
+
+
+
 
 // delete Job
-
-
 app.delete('/job/:id',(req,res,next)=>{
 
     Job.deleteOne({_id:req.params.id})
@@ -160,14 +182,38 @@ app.get('/candidate',(req,res,next)=>{
     .catch(()=>{console.log('an error occured ')});
     
 })
-// update   candidate data
+// update candidate data
 
+app.put('/candidate/:id',(req,res,next)=>{
+    Candidate.findByIdAndUpdate(req.params._id,
+        {
+            $set:{
+                firstName:req.body.firstName,
+                lastName:req.body.lastName,
+                email:req.body.email,
+                skills:req.body.skils,
+                coverletter:req.body.coverletter
+             }
+    },
+    {
+        new:true
+    },
+    (err,update)=>{
+        if(err){
+            res.status(500).send('!error occured while updating candidate')
+        }else{
+            res.status(200).send(update)
+
+        }
+
+    });
+});
 
 
 // delete  candidate data
 app.delete('/candidate/:id',(req,res,next)=>{
 
-    Job.deleteOne({_id:req.params.id})
+    Candidate.deleteOne({_id:req.params.id})
     .then((results)=>{
         res.status(200).json("!Deleted ");
     });
